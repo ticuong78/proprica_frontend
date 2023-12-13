@@ -3,8 +3,8 @@ import ErrorCompany from '../models/errorModels';
 
 const useAxiosFetch = () => {
   const itemFetch = async (url, { ...config }) => {
-    let errorMsg = '';
-    let data = {};
+    let data;
+    let errorMsg = null;
     try {
       const smallResponse = await axios.post(
         '/item',
@@ -12,15 +12,15 @@ const useAxiosFetch = () => {
         { ...config }
       )
       data = smallResponse.data;
-      // const heavyResponse = smallResponse.data ? await axios.post(
-      //   '/item',
-      //   JSON.stringify({ url }),
-      //   {
-      //     withCredentials: true,
-      //     ...config
-      //   }
-      // ) : null;
-      // console.log(heavyResponse.data);
+      const heavyResponse = smallResponse.data ? await axios.post(
+        '/item',
+        JSON.stringify({ url }),
+        {
+          withCredentials: true,
+          ...config
+        }
+      ) : null;
+      console.log(heavyResponse.data);
     } catch (error) {
       errorMsg = new ErrorCompany().getErrorMsg(error);
       if (error.name === "CanceledError") return await Promise.resolve();

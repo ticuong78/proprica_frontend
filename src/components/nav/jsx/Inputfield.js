@@ -15,7 +15,8 @@ const Inputfield = ({ conflict, setConflict }) => {
     if (exist && exist.name) return setConflict(true);
     setItems([...items, {
       id: items[items?.length - 1]?.id + 1 || 1,
-      searchURL
+      searchURL,
+      fetching: true
     }]);
   }
 
