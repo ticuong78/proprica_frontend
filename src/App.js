@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Introduction />} /> {/*introduce what are we, what is proprica, what does it do ? what is our product*/}
-      <Route path="/production" element={
+      <Route path="/production/*" element={
         <Suspense>
           <ProductPage />
         </Suspense>

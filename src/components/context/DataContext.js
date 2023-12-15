@@ -6,12 +6,13 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [searchURL, setSearchURL] = useState('');
-  const queueRef = useRef(1);
+  const [data, setData] = useState([]);
 
   return (
     <DataContext.Provider value={{
       items, setItems,
-      searchURL, setSearchURL, shopList
+      searchURL, setSearchURL, shopList,
+      data, setData
     }}>
       {children}
     </DataContext.Provider>

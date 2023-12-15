@@ -1,0 +1,122 @@
+.product-home {
+  width: 100%;
+  height: 100%;
+  padding-top: 3rem;
+  color: white;
+  background-size: cover;
+  background-color: rgb(25, 25, 25);
+  background-blend-mode: lighten;
+  background-image: url("https://images.contentstack.io/v3/assets/blt150f0e99f9258957/blt9bbd95257cf68687/62b9edc84a5c4d0fcb1892e4/AdobeStock_417088312.jpeg?width=4998&height=3001&format=jpg&quality=90");
+  /* https://foreignbanks.org.uk/app/uploads/2022/11/shutterstock_1824558158-scaled.jpg */
+}
+
+.how-do-we-work {
+  font-size: 3.8rem;
+  text-align: center;
+  margin-top: 7.5rem;
+  margin-bottom: 5rem;
+}
+
+.turtorial {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.steps-container,
+.turtorial-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps {
+  max-width: 29rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps h2,
+.small-step p {
+  line-height: 2rem;
+}
+
+.steps h2 {
+  text-shadow: 0 0 1.2rem steelblue;
+}
+
+.small-step p {
+  font-size: 17px;
+}
+
+.small-step {
+  display: grid;
+  text-align: justify;
+  grid-template-columns: 1fr 18fr;
+}
+
+.submit-email-button,
+.input-email {
+  border: none;
+}
+
+.submit-email-form {
+  width: 100%;
+  display: grid;
+  height: fit-content;
+  color: black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  grid-template-columns: 5fr 1fr;
+  transition: box-shadow 0.5s;
+}
+
+.submit-email-form:hover {
+  box-shadow: 0 0 10rem steelblue;
+}
+
+.submit-email-button {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  border-left: none;
+  color: ghostwhite;
+  border-top-right-radius: 5px;
+  background-color: steelblue;
+  border-bottom-right-radius: 5px;
+}
+
+.input-email {
+  outline: none;
+  font-size: 16px;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video-container p {
+  margin-bottom: 1.5rem;
+}
+
+.video-container h3 {
+  margin-top: 1.5rem;
+  text-shadow: 0 0 0.8rem rgb(25, 25, 25);
+}
+
+.video-section {
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: white;
+}
+
+.video-player {
+  border-radius: 10px;
+  box-shadow: 0 0 3rem steelblue;
+}
