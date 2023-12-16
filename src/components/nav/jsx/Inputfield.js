@@ -4,13 +4,14 @@ import { DataContext } from "../../context/DataContext";
 
 const Inputfield = ({ setIsClicked }) => {
   const [conflict, setConflict] = useState(false);
+  const [message, setMessage] = useState('');
   const { items, setItems, searchURL, setSearchURL } = useContext(DataContext);
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setSearchURL(e.target.value);
-    setConflict(false);
+    setMessage('');
   }
 
   const handleSubmit = async (e) => {
@@ -19,8 +20,11 @@ const Inputfield = ({ setIsClicked }) => {
       setIsClicked(false);
       return navigate("/production/view", { state: { from: location } });
     }
+    const deadLock = items.find(element => element.fetching);
+    if(deadLock?.fetching) return setMessage("Sorry, requesting multiple products is not available");
     const exist = items.find(element => element.searchURL === searchURL);
-    if (exist?.fetching || exist?.data?.name) return setConflict(true);
+    if (exist?.fetching || exist?.data?.name) 
+      return setMessage("Sorry, product has already been existed");
     setItems([...items, {
       id: items[items?.length - 1]?.id + 1 || 1,
       searchURL,
@@ -34,7 +38,13 @@ const Inputfield = ({ setIsClicked }) => {
         <label htmlFor="searching-field">searching for Items and URL</label>
         <input type="text" onChange={handleChange} value={searchURL} className="real-input" placeholder="Type in URL or product name" autoFocus autoComplete="none" />
       </form>
-      <p className="existed" style={{ opacity: conflict ? 1 : 0 }}>Item has already existed</p>
+      <section className="attention-container" style={{ opacity: message !== '' ? 1 : 0 }}>
+        <div className="edge-container">
+          <div className="edge">
+          </div>
+        </div>
+        <p className="attention" >{message}</p>
+      </section>
     </section>
   )
 }

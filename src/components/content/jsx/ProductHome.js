@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import video from "../storage/proprica-turtorial.mp4"
+import { DataContext } from "../../context/DataContext";
 
 const ProductHome = () => {
   const [focus, setFocus] = useState(false);
+  const {isClicked} = useContext(DataContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +55,7 @@ const ProductHome = () => {
           <article className="video-container">
             <p>Happy watching !</p>
             <div className="video-section">
-              <video width="750px" className="video-player" controls muted autoPlay={true} loop>
+              <video width="100%" className="video-player" controls={!isClicked} muted autoPlay={true} loop>
                 <source src={video} type="video/mp4" />
                 <p>
                   Your browser does not support video format

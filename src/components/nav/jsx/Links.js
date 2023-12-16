@@ -1,29 +1,44 @@
 import { Link } from "react-router-dom";
 
 const Links = () => {
+  const lists = [
+    {
+      content:'Home',
+      link: '/production'
+    },
+    {
+      content:'Docs',
+      link: '/docs'
+    },
+    {
+      content:'About',
+      link: '/about'
+    }
+  ];
   return (
     <section className="navigation">
-      <span className="navigation-links">
-        <Link to="/">
+      <span className="navigation-links" >
+        <Link to="/" style={{ textDecoration: "none", color: "#f5f4f3" }}>
           <img src="../../../public/logo512.png" alt="" className="Proprica-Logo" />
         </Link>
       </span>
-      <span className="navigation-links">
-        <Link to="/production" style={{ textDecoration: "none", color: "#f5f4f3" }}>
-          Home
-        </Link>
-      </span>
-      <span className="navigation-links">
-        <Link to="/docs" style={{ textDecoration: "none", color: "#f5f4f3" }}>
-          Docs
-        </Link>
-      </span>
-      <span className="navigation-links">
-        <Link to="/about" style={{ textDecoration: "none", color: "#f5f4f3" }}>
-          About
-        </Link>
-      </span>
+      {lists.map((list, index) => (
+        <List key={index} list={list}/>
+      ))}
     </section>
+  )
+}
+
+const List = ({list}) => {
+
+  return (
+    <>
+      <span className="navigation-links" >
+        <Link to={list.link} style={{ textDecoration: "none", color: "#f5f4f3" }}>
+          {list.content}
+        </Link>
+      </span>
+    </>
   )
 }
 

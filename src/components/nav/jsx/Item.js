@@ -41,8 +41,8 @@ const Item = ({ item }) => {
             id: item.id,
             itemURL: item.searchURL,
             ...newItem.data,
-            models: fullData.data.models,
-            tierSelector: fullData.data.tierSelector
+            models: fullData.data?.models,
+            tierSelector: fullData.data?.tierSelector
           }])
         });
       } catch (err) {

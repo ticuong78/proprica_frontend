@@ -30,6 +30,7 @@ label {
 }
 
 .navigation-links {
+  position: relative;
   line-height: 3rem;
   text-align: center;
 }
@@ -242,15 +243,37 @@ label {
   padding: 5px;
 }
 
-.existed {
+.attention-container{
   z-index: 11;
   display: inline-block;
-  font-size: 13px;
   padding: 5px;
   border-radius: 5px;
-  color: white;
-  inset: auto;
+  top: 2.75rem;
   position: absolute;
   background-color: deepskyblue;
   transition: opacity 0.2s;
+  width: 100%;
+}
+
+.attention {
+  width: 100%;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+
+.edge-container{
+  top: -5px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+.edge{
+  width: 10px;
+  height: 10px;
+  background-color: deepskyblue;
+  transform: rotate(45deg);
 }
