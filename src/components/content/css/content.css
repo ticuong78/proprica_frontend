@@ -1,3 +1,9 @@
+.how-do-we-work {
+  font-size: 3.8rem;
+  margin-top: 7.5rem;
+  margin-bottom: 5rem;
+}
+
 .product-home {
   width: 100%;
   height: 100%;
@@ -9,7 +15,7 @@
   background-image: url("https://images.contentstack.io/v3/assets/blt150f0e99f9258957/blt9bbd95257cf68687/62b9edc84a5c4d0fcb1892e4/AdobeStock_417088312.jpeg?width=4998&height=3001&format=jpg&quality=90");
 }
 
-.how-do-we-work{
+.how-do-we-work {
   text-align: center;
 }
 
@@ -107,29 +113,13 @@
 }
 
 .video-section {
-  border-radius: 15px;
   padding: 2rem;
+  margin-right: 5rem;
+  border-radius: 15px;
   background-color: white;
 }
 
 .video-player {
   border-radius: 10px;
   box-shadow: 0 0 3rem steelblue;
-}
-
-@media (min-width > 1303) {
-  /* https://foreignbanks.org.uk/app/uploads/2022/11/shutterstock_1824558158-scaled.jpg */
-  .how-do-we-work {
-    font-size: 3.8rem;
-    margin-top: 7.5rem;
-    margin-bottom: 5rem;
-  }
-}
-
-@media (max-width <= 1303){
-  .how-do-we-work {
-    font-size: 3rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-  }
 }
