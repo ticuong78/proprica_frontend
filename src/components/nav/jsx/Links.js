@@ -16,7 +16,7 @@ const Links = () => {
     }
   ];
   return (
-    <section className="navigation">
+    <>
       <span className="navigation-links" >
         <Link to="/" style={{ textDecoration: "none", color: "#f5f4f3" }}>
           <img src="../../../public/logo512.png" alt="" className="Proprica-Logo" />
@@ -25,7 +25,7 @@ const Links = () => {
       {lists.map((list, index) => (
         <List key={index} list={list}/>
       ))}
-    </section>
+    </>
   )
 }
 

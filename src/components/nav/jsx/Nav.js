@@ -6,7 +6,9 @@ import '../styles/nav.css';
 const Nav = () => {
   return (
     <nav className="product-page-nav">
-      <Links />
+      <section className="navigation">
+        <Links />
+      </section>
       <SearchInput />
       <LoginSection />
     </nav>
