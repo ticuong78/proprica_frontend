@@ -30,6 +30,9 @@ const FullData = () => {
               categories={categories}
               setCategories={setCategories}
             />
+            <button className="follow-button">
+              Follow
+            </button>
           </div>
         </section>
       </section>

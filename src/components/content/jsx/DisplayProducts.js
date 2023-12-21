@@ -3,6 +3,7 @@ import { DataContext } from "../../context/DataContext"
 import { Link } from "react-router-dom";
 import FullData from "./FullData";
 import { Route, Routes } from "react-router";
+import  {Squash as Hamburger} from 'hamburger-react'
 import '../css/productView.css';
 
 const DisplayProducts = () => {
@@ -11,7 +12,9 @@ const DisplayProducts = () => {
 
   return (
     <div className="product-view-body full-page">
-      <section className="product-nav"></section>
+      <section className="product-nav">
+        <Hamburger/>
+      </section>
       <div className="product-view full-page">
         <section className="product-view-container">
           <section className="product-view-list">
