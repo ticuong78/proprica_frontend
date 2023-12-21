@@ -7,7 +7,7 @@ const IntroductionNavBar = () => {
   return (
     <nav className='nav-bar' >
       <section className="links">
-        <Links/>
+        <Links />
         <span className="navigation-links" >
           <Link to="/plan" style={{ textDecoration: "none", color: "#f5f4f3" }}>
             Pricing
@@ -15,13 +15,13 @@ const IntroductionNavBar = () => {
         </span>
       </section>
       <section className="login-buttons">
-        <button className="authenticate sign-in">
-          <Link style={{ textDecoration: "none", color: "rgb(25, 25, 25)"}}> 
+        <button className="authenticate ">
+          <Link style={{ textDecoration: "none", color: "rgb(25, 25, 25)" }}>
             Sign in
           </Link>
         </button>
-        <button className="authenticate sign-up">
-          <Link style={{ textDecoration: "none", color: "rgb(25, 25, 25)"}}>
+        <button className="authenticate ">
+          <Link style={{ textDecoration: "none", color: "rgb(25, 25, 25)" }}>
             Sign up
           </Link>
         </button>
